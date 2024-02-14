@@ -26,14 +26,14 @@ class App extends Component {
 
   render() {
     const { cats, searchfield } = this.state;
-    const filteredCats = cats.filter(robot =>{
-      return robot.name.toLowerCase().includes(searchfield.toLowerCase());
+    const filteredCats = cats.filter(cat =>{
+      return cat.name.toLowerCase().includes(searchfield.toLowerCase());
     })
     return !cats.length ?
       <h1>Loading</h1> :
       (
         <div className='tc'>
-          <h1 className='f1'>CattoFriends</h1>
+          <h1 className='f1'>Cattos</h1>
           <SearchBox searchChange={this.onSearchChange}/>
           <Scroll>
             <CardList cats={filteredCats} />
