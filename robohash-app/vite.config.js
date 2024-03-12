@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   build: { outDir: '..' },
-  base: '/robohash-project/'
+  base: '/cattos-project/'
 })
